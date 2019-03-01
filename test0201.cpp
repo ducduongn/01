@@ -20,3 +20,6 @@ int main () {
     }
     return 0;
 }
+/*
+        3 phần từ liên tiếp của mảng arrChar là dãy 3 giá trị tăng dần cách đều nhau 1. Ta hiểu được rằng kích thướng kiểu int = 1 byte
+ */
