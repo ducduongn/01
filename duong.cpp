@@ -2,6 +2,7 @@
 #include <SDL.h>
 
 using namespace std;
+
 void logSDLError(std::ostream& os,
                  const std::string &msg, bool fatal = false);
 const int SCREEN_WIDTH = 800;
@@ -60,10 +61,10 @@ void initSDL(SDL_Window* &window, SDL_Renderer* &renderer)
 
     window = SDL_CreateWindow(WINDOW_TITLE.c_str(), SDL_WINDOWPOS_CENTERED,
        SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-    //window = SDL_CreateWindow(WINDOW_TITLE.c_str(), SDL_WINDOWPOS_CENTERED,
-       (SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_FULLSCREEN_DESKTOP);
+    //window = SDL_CreateWindow(WINDOW_TITLE.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_FULLSCREEN_DESKTOP);
     if (window == NULL) logSDLError(std::cout, "CreateWindow", true);
-    //renderer = SDL_CreateSoftwareRenderer(SDL_GetWindowSurface(window));
+
+    renderer = SDL_CreateSoftwareRenderer(SDL_GetWindowSurface(window));
     if (renderer == NULL) logSDLError(std::cout, "CreateRenderer", true);
 
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
