@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1385316878 source:c:\users\public\documents\duong\project0.1\main.cpp
+	<iostream>
+
+1552027656 source:c:\users\public\documents\duong\project0.1\untitled1.cpp
+	<iostream>
+	<SDL.h>
+
+1552029842 source:c:\users\public\documents\duong\project0.1\duong.cpp
+	<iostream>
+	<SDL.h>
+
